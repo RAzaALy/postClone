@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta keywords="programming,web development" />
+    <link rel="stylesheet" href="w3.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prism.css">
+    <title>PostClone</title>
+  </head>
+
+  <body>
+
+    <!-- navbar starts here -->
+    <div class="w3-bar w3-text-orange w3-light-gray">
+      <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
+      <a href="#" class="w3-bar-item w3-button w3-mobile">Services</a>
+      <a href="#" class="w3-bar-item w3-button w3-mobile">About Us</a>
+      <a href="#" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+    </div>
+
+    <div class="w3-container" style="width: 60%; margin: auto">
+      <h1 class="w3-center w3-margin w3-text-orange">Welcome to Post Clone</h1>
+      <p>
+        <label class="w3-text-orange" for="url"><b>URL</b></label>
+        <input
+          class="w3-input w3-border"
+          placeholder="Drop URL here"
+          name="url"
+          id="url"
+          type="text"
+        />
+      </p>
+      <p class="w3-margin-top">
+        <label for="request" class="w3-text-orange">Request</label>
+        <input
+          class="w3-radio"
+          type="radio"
+          id="get"
+          name="requestType"
+          value="Get"
+          checked
+        />
+        <label for="get">Get</label>
+        <input
+          class="w3-radio"
+          type="radio"
+          id="post"
+          name="requestType"
+          value="Post"
+        />
+        <label for="post">Post</label>
+      </p>
+
+      <p class="w3-margin-top">
+        <label for="request" class="w3-text-orange">Content Type</label>
+        <input
+          class="w3-radio"
+          type="radio"
+          name="contentType"
+          id="jsonRadio"
+          value="JSON"
+          checked
+        />
+
+        <label for="JSON">JSON</label>
+        <input
+          class="w3-radio"
+          type="radio"
+          name="contentType"
+          id="paramsRadio"
+          value="Paramaters"
+        />
+        <label for="params">Custom Parameters</label>
+      </p>
+      <div class="w3-row-padding w3-margin-top parameterBox" id="paramBox">
+        <label for="param" class="w3-text-orange">Parameter 1</label>
+        <div class="w3-third">
+          <input
+            class="w3-input w3-border"
+            type="text"
+            name="paramkey"
+            type="text"
+            id="parameterKey1"
+            placeholder="Enter Parameter key 1"
+          />
+        </div>
+        <div class="w3-third">
+          <input
+            class="w3-input w3-border"
+            type="text"
+            id="parameterValue1"
+            name="paramValue"
+            placeholder="Enter Parameter Value 1"
+          />
+        </div>
+        <button id="addParam" class="w3-button w3-orange">+</button>
+        <div id="params"></div>
+      </div>
+      <div class="jsonBox w3-margin-top" id="requestJsonBox">
+        <label for="jsonBox" id="JsonBox" class="w3-text-orange"
+          >Enter JSON Request</label
+        ><br />
+        <textarea name="" id="requestJsonText" cols="70" rows="4"></textarea>
+      </div>
+      <div class="btn">
+        <button
+          class="w3-button w3-orange w3-margin-top"
+          type="submit"
+          id="submit"
+        >
+          Submit
+        </button>
+      </div>
+      
+      <div class="responseBox w3-margin-top">
+        <label
+          for="responseBox"
+          id="responseBox"
+          class="w3-row-padding w3-text-orange"
+          >Response</label
+        >
+        <!-- <textarea
+          name="response"
+          id="responseJsonText"
+          placeholder="Response will appear here..."
+          cols="70"
+          rows="4"
+        ></textarea> -->
+        <pre class="language-javascript scroll">
+            <code 
+            id="prismResponse"
+            class="language-javascript">
+            Response will appear here...
+            </code>
+        </pre>
+      </div>
+
+      <script src="prism.js"></script>
+      <script src="clone.js"></script>
+    </div>
+  </body>
+</html>

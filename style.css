@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+input,
+button {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+.w3-radio {
+  cursor: pointer;
+}
+input {
+  font-size: 1.2rem;
+}
+.toolbar-item button{
+  color:  white !important;
+  cursor: pointer !important;
+  margin-top: .5rem !important;
+  margin-right: 2rem !important;
+  padding: 5px 15px !important;
+}
+.toolbar-item button:hover{
+  color:  #ff9800 !important;
+  cursor: pointer !important;
+  margin-top: 5px !important;
+  margin-left: 30px !important;
+  padding: 5px 15px !important;
+}
+pre{
+  max-height: 35rem !important;
+  overflow: auto !important;
+}
